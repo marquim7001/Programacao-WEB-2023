@@ -9,7 +9,7 @@ Elas foram introduzidas nas especificações ES6 (*ECMAScript 2015*), com o intu
 
 A principal característica das arrow functions é que elas herdam o contexto do valor "this" do escopo ao qual estão inseridas, ao contrário das funções tradicionais.
 
-## Exemplos 
+### Exemplos 
 
 
 Metodo tradicional, Codigo em JavaScript:
