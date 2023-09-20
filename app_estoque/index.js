@@ -26,15 +26,18 @@ app.get("/api/estoque/editar/:id/:qtd", function (req, res){
     let id = req.params.id;
     let qtd = req.params.qtd;
     res.json(estoque.editar_produto(id, qtd));
- });
+});
 
 
+app.get ("/api/estoque/remover/:id", function (req, res){
+    let id = req.params.id;
+    estoque.remover_produto(id);
+    res.json(estoque.listar_produtos());
+})
  
-
 
 const PORT = 8080;
 
 app.listen( PORT, function() {
     console.log("app rodando na porta" + PORT);
 });
-

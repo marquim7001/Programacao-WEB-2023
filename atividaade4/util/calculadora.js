@@ -1,4 +1,4 @@
-function somar (a, b){
+ function somar (a, b){
     return Number.parseInt(a) + Number.parseInt (b);
 }
 

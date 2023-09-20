@@ -30,9 +30,18 @@ produtos.forEach(p => {
     return pRetorno; 
 }
 
+function remover_produto (id){
+    produtos.forEach (p => {
+        if (p.id == id){
+            produtos.splice(p, 1);
+        }
+    });
+}
+
 module.exports= {
     criar_produto,
     adicionar_produto,
     listar_produtos,
-    editar_produto
+    editar_produto,
+    remover_produto
 }       
