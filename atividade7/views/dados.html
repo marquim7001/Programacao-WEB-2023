@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados da Consulta</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body class="bg-secondary">
+
+    {{#erro_form}}
+        <div class="alert alert-danger mt-3" role="alert">
+            O campo {{.}} está vazio, por favor preencha.
+        </div>
+    {{/erro_form}}
+
+    {{^erro_form}}
+
+    <section class="mt-5 container-md">
+        <h1 class="h1">Dados Paciente</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nome Completo</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Data de Nascimento</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">UF</th>
+                    <th scope="col">CEP</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{dadosPaciente.name}}</td>
+                    <td>{{dadosPaciente.cpf}}</td>
+                    <td>{{dadosPaciente.birthDate}}</td>
+                    <td>{{dadosPaciente.address}}</td>
+                    <td>{{dadosPaciente.uf}}</td>
+                    <td>{{dadosPaciente.cep}}</td>
+                    <td>{{dadosPaciente.email}}</td>
+                    <td>{{dadosPaciente.telefone}}</td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </section>
+
+    <section class="mt-5 container-md">
+        <h1 class="h1">Dados da Consulta</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Especialista</th>
+                    <th scope="col">Horário</th>
+                    <th scope="col">Medicamento</th>
+                    <th scope="col">Informações Adicionais</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{dadosConsulta.doctor}}</td>
+                    <td>{{dadosConsulta.dateTime}}</td>
+                    <td>{{dadosConsulta.drug}}</td>
+                    <td>{{dadosConsulta.textInfo}}</td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </section>
+    
+    {{/erro_form}}
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
